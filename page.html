@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <base target="_top">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- generate css file -->
+    <?!= include("page-css"); ?>
+
+    <style>
+        input[type=”text”] {
+            font-size: 10px;
+            transform: scale(0.5);
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Web App</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="fn" type="text" class="validate" required>
+                <label for="fn">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="ln" type="text" class="validate" required>
+                <label for="ln">Last Name</label>
+            </div>
+        </div> <!-- CLOSE ROW -->
+
+        <div class="row">
+            <div class="input-field col s6">
+                <select id="app" required>
+                    <option value="" disabled selected>Choose your app</option>
+                    <?!= list ?>
+                </select>
+                <label>Application</label>
+            </div>
+        </div> <!-- CLOSE ROW -->
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="zip" type="text" class="validate" required pattern="^\d{5}$">
+                <label for="zip">Zip Code</label>
+            </div>
+            <div class="input-field col s6">
+                <input disabled id="est" type="text" class="validate">
+                <label for="est" class="active">Estimate</label>
+            </div>
+        </div> <!-- CLOSE ROW -->
+
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">textsms</i>
+                <input type="text" id="favefunction" class="autocomplete">
+                <label for="favefunction">Your Favorite Function</label>
+            </div>
+            <div class="input-field col s6">
+                <div id="chip" class="chips"></div>
+            </div>
+        </div> <!-- CLOSE ROW -->
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="email" type="email" class="validate" required>
+                <label for="emai">Email</label>
+            </div>
+            <div class="input-field col s6">
+       
+            </div>
+        </div> <!-- CLOSE ROW -->
+
+        <div class="row">
+            <button id="btn" class="waves-effect waves-light btn-small blue darken-3"><i
+                    class="material-icons left">child_care</i>RuN It</button>
+        </div> <!-- CLOSE ROW -->
+
+    </div> <!-- CLOSE CONTAINER -->
+
+
+    <!-- external js file : https://materializecss.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- generate js file -->
+    <?!= include("page-js"); ?>
+
+</body>
+
+</html>

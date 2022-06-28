@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <base target="_top">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- generate css file -->
+    <?!= include("page-css"); ?>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="input-field col s12">
+                <h1>Welcome!</h1>
+                <a href="<?= ScriptApp.getService().getUrl(); ?>?v=form" id="btn" class="waves-effect waves-light btn-small blue darken-3"><i class="material-icons left">child_care</i>Add Record</a>
+                <a href="<?= ScriptApp.getService().getUrl(); ?>?v=table" id="btn" class="waves-effect waves-light btn-small blue darken-3"><i class="material-icons left">child_care</i>show table</a>
+            </div>
+        </div>  <!-- CLOSE ROW -->
+
+     
+    </div> <!-- CLOSE CONTAINER -->
+    
+    
+
+    <!-- external js file : https://materializecss.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+
+</html>
